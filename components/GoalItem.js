@@ -1,7 +1,6 @@
 import { StyleSheet, View, Text, Pressable, Image } from "react-native";
 
 import CustomText from './CustomText'
-import CustomButtonImage from './CustomButtonImage';
 
 function GoalItem(props){
     return (
