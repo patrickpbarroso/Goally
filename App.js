@@ -8,7 +8,7 @@ import {useEffect} from 'react';
 
 import GoalItem from './components/GoalItem';
 import GoalInput from './components/GoalInput';
-import CustomText from './components/CustomText'
+import CustomButton from './components/CustomButton';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -63,7 +63,8 @@ export default function App() {
         <Text style={styles.iconText}>Momentum</Text>
       </View>
       <View styles={styles.addNewGoalButton}>
-        <Button title='Add new goal' color={'#6099A1'} onPress={startAddGoalHandler}/>
+        <CustomButton buttonTitle='Add new goal' buttonColor='#6099A1' onPress={startAddGoalHandler}/>
+        {/* <Button title='Add new goal' color={'#6099A1'} onPress={startAddGoalHandler}/> */}
       </View>
       <GoalInput onAddGoal={addGoalHandler} isVisible={modalIsVisible} onCancel={endAddGoalHandler}/>
       <View style={styles.goalsContainer}>

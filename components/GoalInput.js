@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import {StyleSheet, View, TextInput, Button, Modal, Image} from 'react-native';
 
+import CustomButton from './CustomButton';
+
 function GoalInput(props){
     const [enteredGoalText, setEnteredGoalText] = useState('');
 
@@ -25,10 +27,10 @@ function GoalInput(props){
                 />
                 <View style={styles.buttonContainer}>
                     <View style={styles.button}>
-                        <Button title="Cancel" onPress={props.onCancel} color='#E0604F'/>
+                        <CustomButton buttonTitle="Cancel" onPress={props.onCancel} buttonColor='#E0604F'/>
                     </View>
                     <View style={styles.button}>
-                        <Button title="Add Goal" onPress={addGoalHandler} color='#40B86E'/>
+                        <CustomButton buttonTitle="Add Goal" onPress={addGoalHandler} buttonColor='#40B86E'/>
                     </View>
                 </View>
                 
@@ -70,7 +72,7 @@ const styles = StyleSheet.create({
         marginTop: 16,
     },
     button: {
-        width: 100,
+        width: 120,
         marginHorizontal: 8
     }
 })
