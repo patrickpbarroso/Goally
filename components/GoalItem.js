@@ -1,15 +1,22 @@
 import { StyleSheet, View, Text, Pressable, Image } from "react-native";
 
 import CustomText from './CustomText'
+import { useState } from 'react';
 
 function GoalItem(props){
+    const [isGoalAchieved, setGoalAchieved] = useState('none');
+
+    function turnGoalToAchieved(){
+        setGoalAchieved('line-through');
+    }
+
     return (
         <View style={styles.goalItem}>
-            <CustomText text={props.text}/>
+            <CustomText text={props.text} decorationLine={isGoalAchieved}/>
             <View style={styles.itemIcons}>
                 <Pressable 
                     android_ripple={{color: '#546162'}}
-                    onPress={props.onDeleteItem.bind(this, props.id)}
+                    onPress={turnGoalToAchieved.bind(this, props.id)}
                     style={({pressed}) => pressed && styles.pressedItem}
                 >
                     <Image style={styles.itemIcon} source={require('../assets/images/done.png')}/>

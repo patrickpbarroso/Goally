@@ -1,20 +1,17 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text } from 'react-native';
 
 function CustomText(props){
     return (
-        <Text style={styles.text}>
+        <Text style={{
+            fontFamily: 'Poppins',
+            fontSize: 16,
+            color: 'white',
+            textDecorationLine: props.decorationLine
+        }}>
             {props.text}
         </Text>
     )
 }
-
-const styles = StyleSheet.create({
-    text: {
-        fontFamily: 'Poppins',
-        fontSize: 16,
-        color: 'white',
-    }
-});
 
 export default CustomText;
