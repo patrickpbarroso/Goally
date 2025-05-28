@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     text: {
         fontFamily: 'Poppins',
         fontSize: 16,
-        color: 'white'
+        color: 'white',
     }
 });
 
