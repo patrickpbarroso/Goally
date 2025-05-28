@@ -60,9 +60,10 @@ const styles = StyleSheet.create({
         color: '#546162',
         borderRadius: 6,
         width: '100%',
-        color: 'gray',
+        color: '3A4344',
         fontWeight: 400,
         padding: 16,
+        fontFamily: 'Poppins'
     },
     buttonContainer: {
         flexDirection: 'row',

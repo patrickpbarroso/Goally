@@ -1,5 +1,7 @@
 import { StyleSheet, View, Text, Pressable } from "react-native";
 
+import CustomText from './CustomText'
+
 function GoalItem(props){
     return (
         <View style={styles.goalItem}>
@@ -8,9 +10,7 @@ function GoalItem(props){
                 onPress={props.onDeleteItem.bind(this, props.id)}
                 style={({pressed}) => pressed && styles.pressedItem}
             >
-                <Text style={styles.goalText}>
-                    {props.text}
-                </Text>
+                <CustomText text={props.text}/>
             </Pressable>
         </View>
         
@@ -22,15 +22,14 @@ export default GoalItem;
 
 const styles = StyleSheet.create({
     goalItem: {
-        margin: 8,
+        marginHorizontal: 8,
+        marginVertical: 3,
+        paddingLeft: 20,
+        paddingVertical: 15,
         borderRadius: 6,
         backgroundColor: '#3A4344',
     },
     pressedItem: {
         opacity: 0.5
     },
-    goalText: {
-        color: 'white',
-        padding: 8,
-    }
 })
