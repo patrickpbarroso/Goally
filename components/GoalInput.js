@@ -26,7 +26,7 @@ function GoalInput(props){
                 <Image style={styles.image} source={require('../assets/images/goal.png')}/>
                 <TextInput
                     style={styles.textInputContainer}
-                    placeholder='Your course goal'
+                    placeholder='Your goal'
                     onChangeText={goalInputHandler}
                     value={enteredGoalText}
                 />
