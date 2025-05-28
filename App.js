@@ -37,7 +37,7 @@ export default function App() {
     <>
     <StatusBar style='light'/>
     <View style={styles.appContainer}>
-      <Button title='Add new goal' color={'#a065ec'} onPress={startAddGoalHandler}/>
+      <Button title='Add new goal' color={'#6099A1'} onPress={startAddGoalHandler}/>
       <GoalInput onAddGoal={addGoalHandler} isVisible={modalIsVisible} onCancel={endAddGoalHandler}/>
       <View style={styles.goalsContainer}>
         <FlatList data={courseGoals} renderItem={(itemData) => {
